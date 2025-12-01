@@ -1,7 +1,7 @@
 # PROJECT TemHumiAnalisis
 
 - The purpose of this project is measure **the temperature** and **the humidity** in the room.
-- Base on the returned data from **DHT11**, we can analize and compare it with some certain values. Additionally, draw a chart so user can have a multi sight of thier **Room's temperature|humidity**
+- Base on the returned data from **DHT11**, we can analize and compare it with some certain values. Additionally, this project will display a chart so user can have a multi sight of thier **Room's temperature|humidity**
 
 ## Practical Application
 
