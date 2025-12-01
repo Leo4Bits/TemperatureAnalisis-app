@@ -1,0 +1,17 @@
+# --- Rác hệ thống & Word ---
+.DS_Store
+Thumbs.db
+~$*
+*.log
+
+# --- PlatformIO (Thủ phạm gây nặng máy - Bắt buộc chặn) ---
+.pio/
+.pioenvs/
+.piolibdeps/
+
+# --- Python & Môi trường ảo ---
+env/
+venv/
+.venv/
+__pycache__/
+*.pyc

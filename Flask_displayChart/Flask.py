@@ -18,7 +18,7 @@ def index():
         hum = data_esp.get("hum", 0)
         hic = data_esp.get("hic",0)
         measureError = data_esp.get("measureError",0)
-        measureHicTimes = data_esp.get("measureHifTimes",0)
+        measureHicTimes = int(data_esp.get("measureHicTimes",0))
         status = "Connected"
     except Exception as e:
         print("Lỗi:", e)
