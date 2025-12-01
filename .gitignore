@@ -4,7 +4,7 @@ Thumbs.db
 ~$*
 *.log
 
-# --- PlatformIO (Thủ phạm gây nặng máy - Bắt buộc chặn) ---
+# --- PlatformIO chặn folder này vì nó nặng ---
 .pio/
 .pioenvs/
 .piolibdeps/
