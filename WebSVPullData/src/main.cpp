@@ -7,9 +7,9 @@
 
 typedef unsigned long long ULL;
 ULL cnt = 0;
-float curSumHif = 0;
-float curSSHif = 0;
-float measureHifTimes = 0;
+float curSumHic = 0;
+float curSSHic = 0;
+float measureHicTimes = 0;
 
 // setup DHT11
 #define PinDHT11 4
@@ -78,14 +78,14 @@ void loop(){
             float h = dht11.readHumidity(false);
             
             if (!(isnan(t) || isnan(h))){
-              float hif = dht11.computeHeatIndex(t,h,false);
-              measureHifTimes += 1;
-              curSumHif += hif;
-              curSSHif += hif*hif;
-              float measureError = StandardDeviation(curSumHif = curSumHif,curSSHif = curSSHif,measureHifTimes );
+              float hic = dht11.computeHeatIndex(t,h,false);
+              measureHicTimes += 1;
+              curSumHic += hic;
+              curSSHic += hic*hic;
+              float measureError = StandardDeviation(curSumHic = curSumHic,curSSHic = curSSHic,measureHicTimes );
               if (!(isnan(measureError))){
-                Flask.printf("{\"temp\":%.2f, \"hum\":%.2f, \"hif\":%.2f,  \"measureError\":%.2f,  \"measureHifTimes\":%.2f}\n", t, h, hif, measureError, measureHifTimes);
-                Serial.printf("{\"temp\":%.2f, \"hum\":%.2f, \"hif\":%.2f, \"measureError\":%.2f,  \"measureHifTimes\":%.2f}\n", t, h, hif, measureError, measureHifTimes);
+                Flask.printf("{\"temp\":%.2f, \"hum\":%.2f, \"hic\":%.2f,  \"measureError\":%.2f,  \"measureHicTimes\":%.2f}\n", t, h, hic, measureError, measureHicTimes);
+                Serial.printf("{\"temp\":%.2f, \"hum\":%.2f, \"hic\":%.2f, \"measureError\":%.2f,  \"measureHicTimes\":%.2f}\n", t, h, hic, measureError, measureHicTimes);
               }else{
                 Serial.println("Failed to send because of the NaN measurement");
               }
