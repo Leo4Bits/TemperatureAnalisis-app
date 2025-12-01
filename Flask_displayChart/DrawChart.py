@@ -1,6 +1,6 @@
 import plotly.express as px
 import pandas as pd
-def drawPlotly(dataFrame,status, measureError, measureHifTimes):
+def drawPlotly(dataFrame,status, measureError, measureHicTimes):
     fig = px.bar(
         dataFrame, 
         x="Name value",
@@ -9,7 +9,7 @@ def drawPlotly(dataFrame,status, measureError, measureHifTimes):
         text="Value", 
         title=f"Giám sát Môi trường (Trạng thái: {status})", 
         color_discrete_map={"Nhiệt độ (°C)": "green", "Độ ẩm (%)": "blue", "Chỉ số nóng bức":"red"}, 
-        subtitle= f"Sai số của các giá trị đo được lần thứ {measureHifTimes}: {measureError}"
+        subtitle= f"Sai số của các giá trị đo được lần thứ {measureHicTimes}: {measureError}"
     )
 
     fig.update_layout(
